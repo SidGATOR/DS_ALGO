@@ -13,10 +13,16 @@ class Deque(object):
         return self.items.insert(0,item)
 
     def removeFront(self):
-        return self.items.pop()
+        if self.isEmpty():
+            return "Deque is Empty"
+        else:
+            return self.items.pop()
 
     def removeRear(self):
-        return self.items.pop(0)
+        if self.isEmpty():
+            return "Deque is Empty"
+        else:
+            return self.items.pop(0)
 
     def size(self):
         return len(self.items)
